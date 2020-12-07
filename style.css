@@ -1,0 +1,15 @@
+div {
+	border: 1px solid #eee;
+}
+
+#wrapper {
+	width: 500px;
+}
+
+.box {
+	display: inline-block;
+}
+
+.box-red {
+	background: red;
+}
