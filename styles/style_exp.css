@@ -49,8 +49,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
  
 }
 .block {
+    float: left;
     width: 300px;
     padding: 15px;
+    margin: 10px;
     border: 2px solid black;
     border-radius: 10px;
 }
@@ -64,4 +66,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
     display: inline-block;
     padding: 0 15px;
     border-left: 1px solid black;
+}
+.information {
+    padding: 10px;
 }
