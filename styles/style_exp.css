@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 .header {
     width: 100%;
     /* background-color: blueviolet; */
@@ -65,8 +68,36 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
     cursor: pointer;
     display: inline-block;
     padding: 0 15px;
+}
+.menu li:not(:first-child) {
     border-left: 1px solid black;
 }
 .information {
     padding: 10px;
 }
+.flex-container2 {
+    display: flex;
+}
+/* flex-ex */
+.container-f {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 0 15px;
+ }
+ .section-f {
+    display: flex;
+    /* align-items: start; */
+    align-items: flex-start;
+    flex-direction: row;
+    margin: 0 -15px;
+ }
+ .elem {
+    width: 33.3%;
+    padding: 10px;
+ }
+ .elem-main{
+    border: 1px solid;
+    height: 100px;
+ }
+ 
