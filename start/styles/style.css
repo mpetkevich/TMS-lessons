@@ -1,0 +1,26 @@
+.header {
+    width: 100%;
+    background-color: blueviolet;
+    padding: 20px;
+    
+}
+.banner {
+    width: 100%;
+    background-color: brown;
+    padding: 20px;
+}
+.main {
+    width: 100%;
+    background-color: chocolate;
+    padding: 20px;
+}
+.footer {
+    width: 100%;
+    background-color: darkgreen;
+    padding: 20px;
+}
+.container {
+    background-color: rgb(235, 227, 224);
+    width: 900px;
+    margin:0 auto;
+}

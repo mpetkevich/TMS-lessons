@@ -7,8 +7,8 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Open index2exp.html",
-            "file": "d:\\USA\\TeachMeSkills\\repositories\\zn\\index2exp.html"
+            "name": "Open index.html",
+            "file": "d:\\USA\\TeachMeSkills\\repositories\\zn\\index.html"
         }
     ]
 }
