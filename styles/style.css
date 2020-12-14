@@ -104,6 +104,10 @@ p {
     margin-top: 16px;
 }
 
+.design {
+    width: 100%;
+}
+
 .design>.container {
     background-image: url(../images/design_background.png);
 }
