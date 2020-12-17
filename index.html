@@ -1,29 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document One</title>
-    <link rel="stylesheet" href="styles/reset.css">
+    <!-- <link rel="stylesheet" href="styles/reset.css"> -->
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="images/cube-6x6.ico" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
 </head>
+
 <body>
-    
-    <ul tabindex="0" class="navigation">
-        <li tabindex="1">Главная</li>
-        <li tabindex="2">Компании</li>
-        <li tabindex="3">Клиенты</li>
-        <li tabindex="4">Контакты</li>
-        <li tabindex="5">О нас</li>
-    </ul>
-    <button>1</button>
-    <p>Lorem, ipsum dolor.</p>
-    <button>2</button>
-    <button>3</button>
-    <p class="content">hello</p>
+    <div class="l5-audio-video">
+        <div class="container">
+            <!-- 
+                <audio src=“URL”>...</audio>
+                <video src=“URL”>...</video>
+            -->
+            <!-- 
+                <audio>
+                    <source src="URL">
+                </audio>
+                <video>
+                    <source src="URL">
+                </video>
+            -->
+            <audio controls>
+                <source src="audio/viper.mp3" type="audio/mp3">
+                <source src="audio/viper.ogg" type="audio/ogg">
+                <p>Your browser doesn't support HTML5 audio. Here is a <a href="audio/viper.mp3">link to the audio</a> instead.</p>
+            </audio>
+            <!-- <video src="video/rabbit320.webm" controls>
+                <p>Ваш браузер не поддерживает HTML5 видео. Используйте <a href="video/rabbit320.webm">ссылку на видео</a> для доступа.</p>
+            </video> -->
+            <video controls poster="https://picsum.photos/320/240">
+                <source src="video/rabbit320.mp4" type="video/mp4">
+                <source src="video/rabbit320.webm" type="video/webm">
+                <p>Ваш браузер не подддерживает HTML5 видео. Вот <a href="video/rabbit320.mp4">ссылка на видео</a> взамен.</p>
+            </video>
+        </div>
+    </div>
+    <div class="l5-transform">
+        <div class="container">
+            <!-- transform translate() scale() rotate() skew() -->
+            <div class="cube tr-transform-translate">
+                translate
+            </div>
+            <div class="cube tr-transform-scale">
+                scale
+            </div>
+            <div class="cube tr-transform-rotate">
+                rotate
+            </div>
+            <div class="cube tr-transform-rotate-3d">
+                rotate 3d
+            </div>
+            <div class="cube tr-transform-rotate-scale">
+                rotate to scale
+            </div>
+            <div class="cube tr-transform-skew">
+                skew
+            </div>
+            <div class="cube-face tr-transform-rotate-x">
+                rotate X
+            </div>
+            <div class="cube-face tr-transform-rotate-x-perspective">
+                rotate X perspective
+            </div>
+            <div class="cube-face tr-transform-rotate-y-perspective">
+                rotate Y perspective
+            </div>
+        </div>
+    </div>
+
+
+    <div class="lesson6">
+        <div class="container">
+            <!-- *** transition (all, background-color)-->
+            <div class="tr-back">
+                tr-back
+            </div>
+            <div class="tr-height">
+                tr-height
+            </div>
+            <div class="tr-height">
+                tr-height
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

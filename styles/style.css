@@ -1,63 +1,208 @@
 * {
     box-sizing: border-box;
+    /* -webkit-transform: translate3d(0,0,0); */
 }
 
-li:hover {
-    font-size: 24pt;
-    color:blue;
+body {
+    background-color: #e7e7e7;
 }
-li:focus {
-    color:red;
+
+.l5-audio-video {
+    margin-top: 30px;
 }
-/* li:first-child {
-    border: 1px solid yellow;
-} */
-li:nth-child(odd) {
-    /* color: grey; */
-    background-color: #ccc;
+
+.l5-transform {
+    margin: 30px 0 30px;
 }
-/* ul:focus-within {
+
+.container {
+    width: 1000px;
+    margin: auto;
+    background-color: rgb(60 59 59);
+    padding: 20px;
+}
+
+div.cube {
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    background-color: salmon;
+    margin-bottom: 10px;
+}
+div.cube-face {
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    /* background-image: url(../images/face.gif); */
+    background-image: url(https://picsum.photos/100);
+    margin-bottom: 10px;
+}
+
+/* transform translate() scale() rotate() skew()*/
+
+div.tr-transform-translate {
+    /* transform: translate(left, top)*/
+    /* transform: translateX(10px);
+    transform: translateY(50%); */
+    will-change: transform;
+    transition: transform 1s;
+    transform: translate(0, 0);
+    z-index: 10;
+}
+
+div.tr-transform-translate:hover {
+    transform: translate(50px, 50px);
+}
+
+div.tr-transform-scale {
+    /* transform: scale(1 2 3 4 etc... */
+    /* transform: scale(.4 .6); */
+    background-color: rgb(188, 201, 17);
+    will-change: transform;
+    transition: transform 1s;
+    transform: scale(1);
+    /* transform: scale(-1); Перевернет элемент */
+    z-index: 9;
+}
+
+div.tr-transform-scale:hover {
+    transform: scale(2);
+}
+
+div.tr-transform-rotate {
+    /* transform: rotate(0 - 360 deg Отсчитывается от центра */
+    /* rotate() Поворачивает элемент в двумерном пространстве на заданный угол относительно точки трансформации, задаваемой свойством transform-origin.
+    rotateX() Поворачивает элемент на заданный угол относительно оси X.
+    rotateY() Поворачивает элемент на заданный угол относительно оси Y.
+    rotateZ() Поворачивает элемент на заданный угол относительно оси Z. */
+    background-color: rgb(17, 201, 72);
+    will-change: transform;
+    transition: transform 1s;
+    transform: rotate(0deg);
+    z-index: 1000;
+}
+
+div.tr-transform-rotate:hover {
+    transform: rotate(45deg);
+}
+
+div.tr-transform-rotate-3d {
+    /* rotate3d Поворачивает элемент в трёхмерном пространстве. */
+    background-color: rgb(42, 158, 77);
+    will-change: transform;
+    transition: transform 1s;
+    transform: rotate3d(0);
+    z-index: 1000;
+}
+
+div.tr-transform-rotate-3d:hover {
+    transform: rotate3d(1, 1, 1, 45deg);
+}
+
+div.tr-transform-rotate-scale {
+    /* transform: rotate(0 - 360 deg Отсчитывается от центра */
+    background-color: rgb(16, 167, 61);
+    will-change: transform;
+    transition: transform 1s;
+    transform: rotate(45deg);
+    z-index: 500;
+}
+
+div.tr-transform-rotate-scale:hover {
+    transform: scale(2);
+}
+
+div.tr-transform-skew {
+    /* transform: skew(x, y) Искажение по оси Х и У
+    0 - 360 deg  */
+    background-color: rgb(184, 81, 22);
+    will-change: transform;
+    transition: transform 1s;
+    transform: skew(0);
+    z-index: 9;
+}
+
+div.tr-transform-skew:hover {
+    transform: skew(40deg, 20deg)
+}
+
+div.tr-transform-rotate-x {
+    /* 
+    rotateX() Поворачивает элемент на заданный угол относительно оси X.
+    rotateY() Поворачивает элемент на заданный угол относительно оси Y.
+    rotateZ() Поворачивает элемент на заданный угол относительно оси Z. */
+    background-color: rgb(17, 201, 72);
+    will-change: transform;
+    transition: transform 1s;
+    transform: rotateX(0deg);
+    z-index: 1000;
+    
+}
+div.tr-transform-rotate-x:hover {
+    transform: rotateX(45deg);
+}
+
+div.tr-transform-rotate-x-perspective {
+    background-color: rgb(17, 201, 72);
+    will-change: transform;
+    transition: transform 1s;
+    transform: rotateX(0deg);
+    z-index: 1000;
+    
+}
+div.tr-transform-rotate-x-perspective:hover {
+    transform: perspective(200px) rotateX(45deg);
+}
+
+div.tr-transform-rotate-y-perspective {
+    background-color: rgb(17, 201, 72);
+    will-change: transform;
+    transition: transform 1s;
+    transform: rotateY(0deg);
+    z-index: 1000;
+    
+}
+div.tr-transform-rotate-y-perspective:hover {
+    transform: perspective(200px) rotateY(45deg);
+}
+
+
+/* Lesson 6 */
+/* transform-origin: top left; */
+
+
+/* *** transition (all, background-color) */
+
+div.tr-back {
+    
+    width: 100px;
+    height: 100px;
     border: 1px solid black;
-} */
-/* :checked
-:disabled
-div:empty
-:blank */
-/* :nth-last-child() */
-button:nth-of-type(2) {
-    color: red;
+    background-color: aquamarine;
+    /* visibility: visible; */
+    /* transition: visibility 1s; */
+    /* transition: all 1s cubic-bezier(0, 0, 0.15, 0.92) 1s; */
+    /* transition: all 1s linear 1s; */
+    will-change: background-color;
+    transition: background-color 1s linear 1s;
 }
-/* :nth-last-of-type() */
 
-
-
-/* задание на уроке */
-/* a:hover:not(.active) {
-    background-color: #ccc;
-  }
-  ol:not(.list) a {
-    padding-left:50px;
-  }
-  ol:not(.list) li:nth-child(odd) {
-    background-color:rgba(0,0,0,.1);
-  }
-  .active {
-    color:red;
-  } */
-
-  /* псевдоэлементы */
-
-
-.content::before {
-    content:"Marry ";
+div.tr-back:hover {
+    background-color: blueviolet;
+    /* visibility: hidden; */
 }
-.content::after {
-    content: "!";
+
+/* *** transition (height) */
+
+div.tr-height {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    background-color: wheat;
+    will-change: height;
+    transition: height 1s;
 }
-/* ::placeholder
-::selection
-::first-letter
-::first-line */
 
-
-/* position:sticky */
+div.tr-height:hover {
+    height: 200px;
+}
