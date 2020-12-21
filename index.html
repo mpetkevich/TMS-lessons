@@ -5,89 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document One</title>
-    <link rel="stylesheet" href="styles/reset.css">
-    <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
+    <!-- <link rel="stylesheet" href="styles/reset.css"> -->
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="images/cube-6x6.ico" type="image/x-icon">
 </head>
 
 <body>
-    <div class="l5-audio-video">
-        <div class="container">
-            <!-- 
-                <audio src=“URL”>...</audio>
-                <video src=“URL”>...</video>
-            -->
-            <!-- 
-                <audio>
-                    <source src="URL">
-                </audio>
-                <video>
-                    <source src="URL">
-                </video>
-            -->
-            <audio controls>
-                <source src="audio/viper.mp3" type="audio/mp3">
-                <source src="audio/viper.ogg" type="audio/ogg">
-                <p>Your browser doesn't support HTML5 audio. Here is a <a href="audio/viper.mp3">link to the audio</a>
-                    instead.</p>
-            </audio>
-            <!-- <video src="video/rabbit320.webm" controls>
-                <p>Ваш браузер не поддерживает HTML5 видео. Используйте <a href="video/rabbit320.webm">ссылку на видео</a> для доступа.</p>
-            </video> -->
-            <video controls poster="https://picsum.photos/320/240">
-                <source src="video/rabbit320.mp4" type="video/mp4">
-                <source src="video/rabbit320.webm" type="video/webm">
-                <p>Ваш браузер не подддерживает HTML5 видео. Вот <a href="video/rabbit320.mp4">ссылка на видео</a>
-                    взамен.</p>
-            </video>
-            <img class="test-attr" src="" alt="" data-name="imgdata">
-        </div>
-    </div>
-    <div class="l5-border-radius">
-        <div class="container">
-            <div style="border-radius: 50px 0 0 50px;" class="radius">
-                border-radius: 50px 0 0 50px;
-            </div>
-            <div style="border-radius: 40px 10px" class="radius">
-                border-radius: 40px 10px;
-            </div>
-            <div style="border-radius: 10em/1em;" class="radius">
-                border-radius: 10em/1em;
-            </div>
-            <div style="border-radius: 8px;" class="radius">
-                border-radius: 8px;
-            </div>
-        </div>
 
-    </div>
-    <div class="l5-shadows">
-        <div class="container">
-            <div class="cubes">
-                <!-- тень -->
-                <div class="cube shadow1">
-                    1
-                </div>
-                <div class="cube shadow2">
-                    2
-                </div>
-                <div class="cube shadow3">
-                    3
-                </div>
-                <div class="cube text-shadow1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, neque!
-                </div>
-            </div>
-        </div>
-
-    </div>
     <div class="l5-transform">
         <div class="container">
             <!-- transform translate() scale() rotate() skew() -->
             <div class="cube tr-transform-translate">
                 translate
             </div>
-            <div class="cube tr-transform-scale">
+            <div class="cube tr-transform-scale shadow1">
                 scale
             </div>
             <div class="cube tr-transform-rotate">
@@ -115,7 +47,108 @@
     </div>
 
 
-    
+    <div class="lesson6">
+        <div class="container">
+            <!-- perspective -->
+            <div class="cube-face tr-perspective1">
+                rotate X perspective
+            </div>
+            <div class="cube-face tr-perspective2">
+                rotate Y perspective
+            </div>
+            <div class="wrap-p">
+                <div class="cube-face tr-perspective3">
+                    rotate X perspective
+                </div>
+            </div>
+
+            <section>
+                <p><kbd>transform-style: flat;</kbd></p>
+                <div class="icontainer style-flat">
+                    <div class="flip"></div>
+                </div>
+                <p><kbd>transform-style: preserve-3d;</kbd></p>
+                <div class="icontainer style-3d">
+                    <div class="flip"></div>
+                </div>
+            </section>
+
+            <!-- *** transition (all, background-color)-->
+            <div class="tr-back">
+                tr-back
+            </div>
+                        
+            <!-- transform -->
+            <div class="cube tr-transform-translate-all">
+                translate all
+            </div>
+            <!-- transform-origin -->
+            <div class="cube tr-transform-t-o1">
+                transform-origin: center
+            </div>
+            <div class="cube tr-transform-t-o2">
+                transform-origin: 100% 0
+            </div>
+            <div class="cube tr-transform-t-o3">
+                translate(50px) rotate(-50deg)
+            </div>
+            <div class="cube tr-transform-t-o4">
+                skew(30deg) rotate(-30deg)
+            </div>
+            <div class="cube tr-transform-t-o5">
+                rotate(-30deg) skew(30deg);
+            </div>
+            <hr>
+            <div class="cube-large-margins tr-keyframe-n1">
+                keyframe-n1
+            </div>
+            <div class="cube-large-margins tr-keyframe-n1-1">
+                keyframe-n1
+            </div>
+            <div class="cube-large-margins tr-keyframe-n2">
+                transform: translate (100px)
+            </div>
+            <div class="cube-large-margins tr-keyframe-n3">
+                move-5step
+            </div>
+            <div class="cube-large-margins tr-keyframe-n4">
+                move-5step reverse
+            </div>
+            <div class="cube-large-margins tr-keyframe-n5">
+                scale 5s linear 0.5s infinite;
+            </div>
+            <div class="cube-large-margins tr-keyframe-n6">
+                animation-fill-mode
+            </div>
+            <hr>
+            <div class="row001">
+                <div class="cube-large-margins tr-keyframe-n7-1">
+                    animation-play-state
+                </div>
+                <div id="n7" class="cube-large-margins tr-keyframe-n7-2">
+                    animation-play-state
+                    paused
+                </div>
+            </div>
+            <hr>
+            <div class="show-letters">
+                <span>M</span>
+                <span>A</span>
+                <span>T</span>
+                <span>R</span>
+                <span>I</span>
+                <span>X</span>
+            </div>
+
+            <hr>
+            
+        </div>
+    </div>
+    <script>
+        setTimeout(() => {
+            document.getElementById('n7').style.animationPlayState = 'paused';
+        }, 2500);
+    </script>
 </body>
 
 </html>
