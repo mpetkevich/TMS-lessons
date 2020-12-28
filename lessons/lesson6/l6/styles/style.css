@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    /* -webkit-transform: translate3d(0,0,0); */
+    -webkit-transform: translate3d(0, 0, 0);
 }
 
 body {
@@ -26,33 +26,38 @@ body {
     /* Отступ снизу */
 }
 
-
-
 .l5-audio-video, .l5-border-radius, .l5-shadows {
     margin-top: 30px;
 }
+
 .l5-shadows .container {
     background-color: white;
 }
+
 .l5-shadows .cube {
     border: none;
     margin: 10px;
     background-color: whitesmoke;
 }
-.cubes{
+
+.cubes {
     display: flex;
 }
+
 .shadow1 {
-    box-shadow: 4px 5px 6px rgba(0, 0, 0, .5);
+    box-shadow: 4px 5px 6px rgba(255, 255, 255, .5);
 }
+
 .shadow2 {
-    box-shadow: inset 4px 5px 6px rgba(0,0,0,.5);
+    box-shadow: inset 4px 5px 6px rgba(0, 0, 0, .5);
 }
+
 .shadow3 {
-    box-shadow: inset 4px 5px 6px rgba(0,0,0,.5), 4px 5px 6px rgba(0,0,0,.5);
+    box-shadow: inset 4px 5px 6px rgba(0, 0, 0, .5), 4px 5px 6px rgba(0, 0, 0, .5);
 }
+
 .text-shadow1 {
-    text-shadow: 5px 5px 3px rgba(0,0,0,.3);
+    text-shadow: 5px 5px 3px rgba(0, 0, 0, .3);
 }
 
 .l5-transform {
@@ -60,10 +65,16 @@ body {
 }
 
 .container {
-    width: 1000px;
+    /* width: 1000px; */
+    max-width: 1000px;
     margin: auto;
     background-color: rgb(60 59 59);
     padding: 20px;
+}
+
+.l5-transform .container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 div.cube {
@@ -71,7 +82,15 @@ div.cube {
     height: 100px;
     border: 1px solid white;
     background-color: salmon;
-    margin-bottom: 10px;
+    margin: 10px;
+}
+
+div.cube-large-margins {
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    background-color: salmon;
+    margin: 100px;
 }
 
 div.cube-face {
@@ -80,7 +99,7 @@ div.cube-face {
     border: 1px solid white;
     /* background-image: url(../images/face.gif); */
     background-image: url(https://picsum.photos/100);
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 /* transform translate() scale() rotate() skew()*/
@@ -107,7 +126,7 @@ div.tr-transform-scale {
     transition: transform 1s;
     transform: scale(1);
     /* transform: scale(-1); Перевернет элемент */
-    z-index: 9;
+    z-index: 2000;
 }
 
 div.tr-transform-scale:hover {
@@ -213,9 +232,380 @@ div.tr-transform-rotate-y-perspective:hover {
 
 /* Lesson 6 */
 
-/* transform-origin: top left; */
+div.tr-perspective1 {
+    background-color: rgb(17, 201, 72);
+    transform: perspective(200px) rotateX(45deg);
+    z-index: 1000;
+}
+
+div.tr-perspective2 {
+    background-color: rgb(17, 201, 72);
+    transform: perspective(200px) rotateY(-45deg);
+    z-index: 1000;
+}
+
+.wrap-p {
+    perspective:500px;
+}
+
+div.tr-perspective3 {
+    perspective-origin: left center;
+    background-color: rgb(17, 201, 72);
+    transform: rotateY(45deg);
+    transition: ease 1s;
+    z-index: 1000;
+}
+
+section {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+p {
+    color: white;
+    padding: 20px 0;
+}
+
+.icontainer {
+    perspective: 500px;
+    margin: 0 40px;
+    background: rgba(195, 209, 212, .7);
+    border-radius: 5px;
+}
+
+.style-flat {
+    transform-style: flat;
+}
+
+.style-3d {
+    transform-style: preserve-3d;
+}
+
+.flip {
+    height: 160px;
+    transform: rotateX(45deg);
+    border-radius: 5px;
+    background: rgba(169, 90, 145, .8);
+    -webkit-animation: rotate 5s infinite;
+    animation: rotate 5s infinite;
+}
+
+@keyframes rotate {
+    50% {
+        transform: none;
+    }
+}
+
+
+
+div.tr-transform-translate-all {
+    will-change: transform;
+    transition: transform 1s;
+    transform: translate(0, 0);
+    z-index: 10;
+}
+
+div.tr-transform-translate-all:hover {
+    transform: skew(30deg) scale(1.1, 1.1) rotate(40deg) translate(10px, 20px);
+}
+
+/* transform-origin: top right; */
+
+div.tr-transform-t-o1 {
+    transition: transform 1s;
+    transform-origin: center;
+    z-index: 10;
+}
+
+div.tr-transform-t-o1:hover {
+    transform: rotate(-20deg);
+}
+
+div.tr-transform-t-o2 {
+    transition: transform 1s;
+    transform-origin: 100% 0;
+    /* transform-origin: top right; */
+    z-index: 10;
+}
+
+div.tr-transform-t-o2:hover {
+    transform: rotate(-20deg);
+}
+
+div.tr-transform-t-o3 {
+    transition: transform 5s;
+    transform-origin: 100% 0;
+    background-color: bisque;
+    z-index: 10;
+}
+
+div.tr-transform-t-o3:hover {
+    transform: translate(50px) rotate(-50deg);
+}
+
+div.tr-transform-t-o4 {
+    transition: transform 2s;
+    transform-origin: 100% 0;
+    background-color: bisque;
+    z-index: 10;
+}
+
+div.tr-transform-t-o4:hover {
+    transform: skew(30deg) rotate(-30deg);
+}
+
+div.tr-transform-t-o5 {
+    transition: transform 2s;
+    transform-origin: 100% 0;
+    background-color: bisque;
+    z-index: 10;
+}
+
+div.tr-transform-t-o5:hover {
+    transform: rotate(-30deg) skew(30deg);
+}
+
+@keyframes rotate1 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-90deg);
+    }
+}
+
+/* @keyframes move {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(100px);}
+ } */
+
+div.tr-keyframe-n1 {
+    transform-origin: bottom right;
+    background-color: rgb(14, 163, 21);
+    z-index: 10;
+    /* animation: rotate1 3s linear 0.5s infinite; */
+}
+
+div.tr-keyframe-n1:hover {
+    animation: rotate1 3s linear 0.5s infinite;
+}
+
+@keyframes rotate2 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+div.tr-keyframe-n1-1 {
+    transform-origin: bottom right;
+    background-color: rgb(14, 79, 163);
+    z-index: 10;
+    animation: rotate2 5s linear 0.5s infinite;
+}
+
+div.tr-keyframe-n2 {
+    background-color: rgb(214, 128, 22);
+    z-index: 10;
+}
+
+div.tr-keyframe-n2:hover {
+    transform: translate(100px);
+}
+
+@keyframes move-5step {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(500px, 0);
+    }
+    50% {
+        transform: translate(300px, 100px);
+    }
+    75% {
+        transform: translate(0, 100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+div.tr-keyframe-n3 {
+    background-color: rgb(97, 212, 103);
+    z-index: 10;
+    animation: move-5step 5s linear 0.5s infinite;
+}
+
+/* div.tr-keyframe-n3:hover {
+    animation: move-5step 5s linear 0.5s infinite;
+} */
+
+div.tr-keyframe-n4 {
+    background-color: rgb(92, 196, 228);
+    z-index: 10;
+    animation: move-5step 5s linear 0.5s infinite;
+    animation-direction: reverse;
+}
+
+/* div.tr-keyframe-n4:hover {
+    animation: move-5step 5s linear 0.5s infinite;
+    animation-direction: reverse;
+} */
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.5);
+        background-color: rgb(161, 10, 10);
+    }
+    100% {
+        transform: scale(1);
+        background-color: rgb(233, 62, 62);
+    }
+}
+
+div.tr-keyframe-n5 {
+    background-color: rgb(233, 62, 62);
+    z-index: 11;
+    animation: scale 5s linear 0.5s infinite;
+    /* animation-direction: reverse */
+    /* animation-iteration-count: 5; */
+}
+
+@keyframes scale2 {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1.5);
+        background-color: yellow;
+    }
+}
+
+div.tr-keyframe-n6 {
+    background-color: rgb(233, 62, 62);
+    z-index: 11;
+    animation: scale2 10s linear 0.5s;
+    /* animation-fill-mode: backwards; */
+    /* animation-fill-mode какие стили применить после того как анимация закончится */
+    animation-fill-mode: forwards;
+}
+
+@keyframes scale3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+        background-color: rgb(91, 59, 209);
+    }
+    100% {
+        transform: scale(1);
+        background-color: rgb(230, 27, 220);
+    }
+}
+
+.row001 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.tr-keyframe-n7-1 {
+    background-color: rgb(230, 27, 220);
+    z-index: 11;
+    animation: scale3 5s linear 0.5s;
+}
+
+div.tr-keyframe-n7-2 {
+    background-color: rgb(230, 27, 220);
+    z-index: 11;
+    animation: scale3 5s linear 0.5s;
+}
+
+.show-letters {
+    display: flex;
+    /* opacity: 0; */
+}
+
+.show-letters span {
+    opacity: 0;
+    font-size: 30pt;
+    padding: 5px;
+    display: flex;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-letters span:nth-child(odd) {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.show-letters span:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.show-letters span:nth-child(1) {
+    animation: show 1s 1s;
+    animation-fill-mode: forwards;
+}
+
+.show-letters span:nth-child(2) {
+    animation: show 1s 2s;
+    animation-fill-mode: forwards;
+}
+
+.show-letters span:nth-child(3) {
+    animation: show 1s 3s;
+    animation-fill-mode: forwards;
+}
+
+.show-letters span:nth-child(4) {
+    animation: show 1s 4s;
+    animation-fill-mode: forwards;
+}
+
+.show-letters span:nth-child(5) {
+    animation: show 1s 5s;
+    animation-fill-mode: forwards;
+}
+
+.show-letters span:nth-child(6) {
+    animation: show 1s 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 /* *** transition (all, background-color) */
+
+/* -webkit-transition Chrome Safari Android*/
+
+/* -o-transition Opera*/
+
+/* -moz-transition Firefox*/
+
+/* transition-property, transition-duration, transition-timing-function и transition-delay. */
+
+/* transition-timing-function http://htmlbook.ru/css/transition-timing-function */
 
 div.tr-back {
     width: 100px;
@@ -233,19 +623,4 @@ div.tr-back {
 div.tr-back:hover {
     background-color: blueviolet;
     /* visibility: hidden; */
-}
-
-/* *** transition (height) */
-
-div.tr-height {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    background-color: wheat;
-    will-change: height;
-    transition: height 1s;
-}
-
-div.tr-height:hover {
-    height: 200px;
 }
