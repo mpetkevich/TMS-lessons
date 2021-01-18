@@ -1,0 +1,34 @@
+@import "./config/normalize";
+@import "./config/variables";
+@import "./config/mixins";
+
+.header__text {
+    // color: $secondary-color;
+    @include text ($primary-font, $huge-text, 700, $secondary-color, 1.5, uppercase);
+}
+
+.main__text {
+    @extend .header__text;
+}
+
+.footer_text {
+    @extend .header__text;
+}
+
+.box {
+    // @include flexCentre;
+    @include flexPos(center, center, row, wrap);
+    width: 500px;
+    height: 500px;
+    background-color: #eee;
+    @include sm {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.box__inner {
+    width: 100px;
+    height: 100px;
+    background-color: $primary-color;
+}

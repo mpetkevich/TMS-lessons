@@ -1,0 +1,50 @@
+// @mixin flexPos {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+@mixin flexPos($a, $b, $c, $d) {
+    display: flex;
+    align-items: $a;
+    justify-content: $b;
+    flex-direction: $c;
+    flex-wrap: $d;
+}
+
+@mixin text($a, $b, $c, $d, $e, $z) {
+    font-family: $a;
+    font-size: $b;
+    font-weight: $c;
+    color: $d;
+    line-height: $e;
+    text-transform: $z;
+}
+
+// Small devices
+@mixin sm {
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin md {
+    @media (max-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin lg {
+    @media (max-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices
+ @mixin xl {
+    @media (max-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
